@@ -1,3 +1,4 @@
+
 (function () {
     "use strict";
 
@@ -7,11 +8,11 @@
     }
 
     function calculate(form, errorBox, resultBox) {
-        let qtyField = form.elements.quantity;
-        let productField = form.elements.product;
-        let qtyText = qtyField.value.trim();
-        let quantity;
-        let price;
+        var qtyField = form.elements.quantity;
+        var productField = form.elements.product;
+        var qtyText = qtyField.value.trim();
+        var quantity;
+        var price;
 
         // Только цифры, без знаков, пробелов и букв
         if (!(/^[0-9]+$/).test(qtyText)) {
@@ -40,10 +41,10 @@
     }
 
     function init() {
-        let form = document.getElementById("calc-form");
-        let errorBox = document.getElementById("calc-error");
-        let resultBox = document.getElementById("calc-result");
-        let button = document.getElementById("calc-button");
+        var form = document.getElementById("calc-form");
+        var errorBox = document.getElementById("calc-error");
+        var resultBox = document.getElementById("calc-result");
+        var button = document.getElementById("calc-button");
 
         if (!form || !errorBox || !resultBox || !button) {
             return;
